@@ -112,15 +112,3 @@ Then open `http://localhost:8501` in your browser and upload any aerial image.
 🔗 [View Project PPT on Google Drive](https://drive.google.com/file/d/1Gj8DIDbznU06rD27nYAFg_90BRFDrXZx/view?usp=sharing)
 
 ---
-
-## 📸 App Screenshots
-
-**Home Screen**
-
-![Home](screenshots/home.png)
-
-**Prediction Result — Drone detected at 99.91% confidence**
-
-![Result](screenshots/result.png)
-
----
