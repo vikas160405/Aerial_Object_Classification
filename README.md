@@ -1,114 +1,153 @@
 # 🛸 Aerial Object Classification & Detection
-### Bird vs Drone — Deep Learning Binary Classifier
 
----
+## Bird vs Drone — Deep Learning Binary Classifier
 
-## 📌 Project Overview
+### 📌 Project Overview
 
-This project builds and deploys a deep learning model to classify aerial images as either **Bird** or **Drone**. With drones increasingly appearing near airports, restricted zones, and wildlife areas, automated detection systems are critical for safety and surveillance.
+This project develops and deploys a deep learning-based image classification system capable of distinguishing between aerial images of birds and drones.
 
-The pipeline covers data preparation, model training (Custom CNN + Transfer Learning), evaluation, and deployment via a Streamlit web app.
+With the increasing presence of drones near airports, restricted airspaces, and wildlife conservation zones, automated aerial object identification has become an important component of modern surveillance and safety systems.
+
+The project covers the complete machine learning workflow including data preprocessing, model development, transfer learning, evaluation, and deployment through an interactive Streamlit web application.
 
 ---
 
 ## 🎯 Objectives
 
-- Build a binary image classifier (Bird vs Drone)
-- Compare a Custom CNN baseline against Transfer Learning (MobileNetV2)
-- Deploy the best model as an interactive web application
+* Build a binary image classification model (Bird vs Drone)
+* Compare a Custom CNN baseline with Transfer Learning approaches
+* Evaluate model performance using standard classification metrics
+* Deploy the best-performing model as a user-friendly web application
 
 ---
 
-## 📊 Model Results
+## 📊 Model Performance
 
-| Model | Test Accuracy |
-|---|---|
-| Custom CNN | 56.28% |
-| Transfer Learning (Fine-tuned) | 96.74% |
-| **Transfer Learning MobileNetV2** | **99.07% ✅** |
+| Model                         | Test Accuracy |
+| ----------------------------- | ------------- |
+| Custom CNN                    | 56.28%        |
+| Fine-Tuned CNN                | 96.74%        |
+| MobileNetV2 Transfer Learning | **99.07%** ✅  |
 
-> MobileNetV2 was selected as the best model and deployed in the Streamlit app.
+MobileNetV2 achieved the highest accuracy and was selected for deployment.
 
 ---
 
 ## 🗂️ Project Structure
 
-```
 aerial-object-classification/
-├── app.py                        # Streamlit deployment app
-├── aerial_classification.ipynb   # Full training notebook
-├── model_comparison_report.csv   # Model accuracy results
-├── requirements.txt              # Python dependencies
+
+├── app.py
+
+├── aerial_classification.ipynb
+
+├── model_comparison_report.csv
+
+├── requirements.txt
+
 ├── models/
-│   ├── best_model.h5             # Saved best model (MobileNetV2)
-│   └── best_model_info.txt       # Preprocessing mode info
+
+│ ├── best_model.h5
+
+│ └── best_model_info.txt
+
 └── README.md
-```
 
 ---
 
-## 🧠 Approach
+## 🧠 Methodology
 
 ### 1. Data Preparation
-- Aerial images of birds and drones collected and organized
-- Images resized to **224×224** pixels
-- Split into training and test sets
 
-### 2. Custom CNN (Baseline)
-- A CNN built from scratch with Conv2D, MaxPooling, Dense layers
-- Achieved ~56% accuracy — limited by small dataset size
+* Collected aerial images containing birds and drones
+* Resized images to 224 × 224 pixels
+* Applied preprocessing compatible with MobileNetV2
+* Split dataset into training and testing subsets
 
-### 3. Transfer Learning — MobileNetV2
-- Pre-trained MobileNetV2 (ImageNet weights) used as a feature extractor
-- Custom classification head added on top
-- Fine-tuned top layers for domain-specific learning
-- Achieved **99.07% test accuracy**
+### 2. Custom CNN Baseline
+
+A Convolutional Neural Network was developed from scratch using:
+
+* Conv2D Layers
+* MaxPooling Layers
+* Dense Layers
+* Dropout Regularization
+
+Performance: 56.28% Accuracy
+
+---
+
+### 3. Transfer Learning using MobileNetV2
+
+To improve performance, MobileNetV2 pre-trained on ImageNet was utilized.
+
+Key Steps:
+
+* Loaded ImageNet weights
+* Added custom classification layers
+* Fine-tuned upper layers
+* Optimized using Adam optimizer
+
+Performance: 99.07% Accuracy
+
+---
 
 ### 4. Deployment
-- Best model served via **Streamlit**
-- Users upload an aerial image → model predicts Bird or Drone with confidence score
+
+The best-performing model was deployed using Streamlit.
+
+Features:
+
+* Upload aerial images
+* Real-time Bird/Drone classification
+* Confidence score visualization
+* Lightweight and easy-to-use interface
 
 ---
 
-## 🚀 How to Run
+## 🚀 Installation
 
-### 1. Clone the repository
-```bash
+### Clone Repository
+
 git clone https://github.com/YOUR_USERNAME/aerial-object-classification.git
+
 cd aerial-object-classification
-```
 
-### 2. Install dependencies
-```bash
+### Install Dependencies
+
 pip install -r requirements.txt
-```
 
-### 3. Run the Streamlit app
-```bash
+### Run Application
+
 streamlit run app.py
-```
 
-Then open `http://localhost:8501` in your browser and upload any aerial image.
+Open:
 
-> ⚠️ Make sure `models/best_model.h5` exists. Run the notebook first to train and save the model.
-
----
-
-## 🛠️ Tech Stack
-
-| Category | Tools |
-|---|---|
-| Deep Learning | TensorFlow, Keras |
-| Transfer Learning | MobileNetV2 (ImageNet) |
-| Data Processing | NumPy, Pandas, Pillow |
-| Visualization | Matplotlib, Seaborn |
-| Evaluation | Scikit-learn |
-| Deployment | Streamlit |
+http://localhost:8501
 
 ---
 
-## 📊 Project Presentation
+## 🛠️ Technology Stack
 
-🔗 [View Project PPT on Google Drive](https://drive.google.com/file/d/1Gj8DIDbznU06rD27nYAFg_90BRFDrXZx/view?usp=sharing)
+| Category             | Technologies        |
+| -------------------- | ------------------- |
+| Programming Language | Python              |
+| Deep Learning        | TensorFlow, Keras   |
+| Transfer Learning    | MobileNetV2         |
+| Data Processing      | NumPy, Pandas       |
+| Visualization        | Matplotlib, Seaborn |
+| Evaluation           | Scikit-learn        |
+| Deployment           | Streamlit           |
 
 ---
+
+## 📈 Future Enhancements
+
+* Multi-class aerial object classification
+* Real-time video stream processing
+* YOLOv8 object detection integration
+* Edge deployment on drones and surveillance devices
+* Cloud deployment using AWS or Azure
+
+---
+
