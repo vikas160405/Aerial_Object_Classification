@@ -113,14 +113,3 @@ Then open `http://localhost:8501` in your browser and upload any aerial image.
 
 ---
 
-## 📸 App Screenshots
-
-**Home Screen**
-
-![Home](screenshots/home.png)
-
-**Prediction Result — Drone detected at 99.91% confidence**
-
-![Result](screenshots/result.png)
-
----
