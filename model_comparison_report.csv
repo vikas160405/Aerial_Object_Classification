@@ -1,4 +1,0 @@
-Model,Test Accuracy
-Transfer Learning MobileNetV2,0.9906976819038391
-Transfer Learning Fine-tuned,0.9674418568611145
-Custom CNN,0.5627906918525696
