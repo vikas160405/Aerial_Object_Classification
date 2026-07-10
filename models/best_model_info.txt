@@ -1,0 +1,2 @@
+Transfer Learning MobileNetV2
+preprocess: mobilenet_v2

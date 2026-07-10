@@ -1,0 +1,10 @@
+tensorflow>=2.13
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
+streamlit
+pillow
+opencv-python-headless
+streamlit-cropper
