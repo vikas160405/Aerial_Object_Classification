@@ -74,4 +74,5 @@ A 6-slide overview covering the project pipeline, model comparison (Custom CNN v
 MobileNetV2), the deployed Streamlit app, and known limitations. Useful for a quick
 walkthrough without digging into the notebook.
 
-View the project presentation (PDF)
+View the project presentation (pdf):
+https://drive.google.com/file/d/1Bey58AX_Os3p9sI4uBvUoFafecBPDcE3/view?usp=sharing
