@@ -68,3 +68,10 @@ Deep Learning, Computer Vision, Image Classification, Python, TensorFlow/Keras,
 Data Preprocessing & Augmentation, Model Evaluation (accuracy/precision/recall/F1,
 confusion matrix), Streamlit Deployment (including interactive image cropping).
 
+## Presentation
+
+A 6-slide overview covering the project pipeline, model comparison (Custom CNN vs
+MobileNetV2), the deployed Streamlit app, and known limitations. Useful for a quick
+walkthrough without digging into the notebook.
+
+View the project presentation (PDF)
